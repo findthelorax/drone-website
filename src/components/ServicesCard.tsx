@@ -18,9 +18,7 @@ const ServicesCard: React.FC = () => {
                                 src={service.image} 
                                 alt={service.title} 
                                 className={styles.serviceImage} 
-                                width={200} 
-                                height={200}
-                                layout="responsive"
+                                fill
                             />
                         </div>
                     </div>

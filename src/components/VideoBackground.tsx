@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import styles from "../styles/videoBackground.module.css";
 
 const VideoBackground: React.FC = () => {
     return (
@@ -14,7 +15,7 @@ const VideoBackground: React.FC = () => {
                 loop 
                 muted 
                 playsInline 
-                style={{ width: '100%', height: 'auto' }}
+                className={styles.videoBackground}
             />
         </>
     );

@@ -52,7 +52,7 @@
     font-size: 2rem;
     line-height: 1.5;
     letter-spacing: 1.5px;
-    max-width: 50%;
+    max-width: 80%;
     max-height: 30%;
     position: absolute;
     bottom: 5%;
@@ -68,28 +68,43 @@
         max-height: 30%;
         bottom: 2%;
         right: 2%;
+        left: 40%;
     }
 }
 
 @media (max-width: 1000px) {
     .homeCard {
-        font-size: 1.7rem;
+        font-size: 1.4rem;
         padding: 15px;
-        max-width: 50%;
+        max-width: 70%;
         max-height: 30%;
         bottom: 2%;
         right: 2%;
+        left: 30%;
     }
 }
 
 @media (max-width: 825px) {
     .homeCard {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         padding: 15px;
-        max-width: 50%;
+        max-width: 70%;
         max-height: 30%;
         bottom: 2%;
         right: 2%;
+        left: 20%;
+    }
+}
+
+@media (max-width: 660px) {
+    .homeCard {
+        font-size: 1.3rem;
+        padding: 15px;
+        max-width: 70%;
+        max-height: 30%;
+        bottom: 2%;
+        right: 2%;
+        left: 20%;
     }
 }
 
@@ -110,6 +125,24 @@
     opacity: 0;
     filter: blur(15px);
     animation: fadeIn 1s forwards;
+}
+
+@media (max-width: 1000px) {
+    .homeSlogan {
+        top: 20%;
+        left: 20%;
+        white-space: wrap;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 660px) {
+    .homeSlogan {
+        top: 20%;
+        left: 20%;
+        white-space: wrap;
+        font-size: 1.5rem;
+    }
 }
 
 @keyframes fadeIn {
@@ -140,7 +173,7 @@
     .homeButton {
         font-size: 1.5rem;
         padding: 15px;
-        bottom: 20%;
+        bottom: 25%;
         right: 20%;
     }
 }
@@ -159,7 +192,7 @@
         font-size: 1rem;
         padding: 15px;
         bottom: 25%;
-        right: 10%;
+        right: 20%;
     }
 }
 
@@ -168,7 +201,7 @@
         font-size: 1rem;
         padding: 15px;
         bottom: 30%;
-        right: 10%;
+        right: 20%;
     }
 }
 

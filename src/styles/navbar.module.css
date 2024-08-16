@@ -40,7 +40,7 @@
         -1px -1px 0 black,  
         1px -1px 0 black,
         -1px 1px 0 black,
-        1px 1px 0 black; /* Add this line */
+        1px 1px 0 black;
 }
 
 .logoText span:nth-child(1) {
@@ -127,4 +127,51 @@
 
 .navLinks a:hover {
     color: var(--navbarLink-hover-color);
+}
+
+@media (max-width: 1050px) {
+    .navbar {
+        width: 90%;
+    }
+
+    .logo {
+        font-size: 2rem;
+    }
+
+    .navLinks a {
+        font-size: 1.5rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .navbar {
+        width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .navLinks a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .navbar {
+        width: 100%;
+        margin: 10px auto;
+        padding: 5px;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .navLinks a {
+        font-size: .8rem;
+    }
 }
