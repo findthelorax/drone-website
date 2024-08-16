@@ -1,7 +1,9 @@
 import React from "react";
-import { Carousel } from "react-responsive-carousel";
+import dynamic from "next/dynamic";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "../styles/videosCard.module.css";
+
+const Carousel = dynamic(() => import("react-responsive-carousel").then(mod => mod.Carousel), { ssr: false });
 
 interface VideoCardProps {
     videoId: string;

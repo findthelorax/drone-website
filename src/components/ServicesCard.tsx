@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from "../styles/services.module.css";
+import Image from 'next/image';
+import styles from '../styles/services.module.css';
 import { services } from '../data/servicesData';
 
 const ServicesCard: React.FC = () => {
@@ -12,7 +13,16 @@ const ServicesCard: React.FC = () => {
                             <h2 className={styles.serviceTitle}>{service.title}</h2>
                             <p className={styles.serviceDescription}>{service.description}</p>
                         </div>
-                        <img src={service.image} alt={service.title} className={styles.serviceImage} />
+                        <div className={styles.serviceImageWrapper}>
+                            <Image 
+                                src={service.image} 
+                                alt={service.title} 
+                                className={styles.serviceImage} 
+                                width={200} 
+                                height={200}
+                                layout="responsive"
+                            />
+                        </div>
                     </div>
                 ))}
             </div>

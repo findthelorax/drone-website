@@ -55,10 +55,16 @@
     margin-right: 25%;
 }
 
-.serviceImage {
-    width: 150px;
+.serviceImageWrapper {
+    width: 300px;
     height: auto;
-    border-radius: 8px;
+    overflow: hidden;
+}
+
+.serviceImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .serviceTitle {
