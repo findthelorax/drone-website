@@ -1,0 +1,71 @@
+.contactSection {
+    font-family: 'Oswald' !important;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 100%;
+    margin-top: auto;
+    color: black;
+    font-size: 1.5rem;
+}
+
+.contactSectionRow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 12px;
+    width: 100%;
+}
+
+.contactSectionRowMd {
+    width: 25%;
+}
+
+.contactSectionRowLg {
+    width: 25%;
+}
+
+.contactCardContainer {
+    width: 100%;
+}
+
+.contactCardContainerMd {
+    width: 50%;
+}
+
+.contactCardContainerLg {
+    width: 50%;
+}
+
+.contactTitle {
+    margin-bottom: 16px;
+    font-size: 32px;
+}
+
+.contactText {
+    margin-bottom: 32px;
+}
+
+.contactSubText {
+    margin-bottom: 8px;
+}
+
+.socialIcons {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.socialIcon {
+    transition: transform 0.3s;
+}
+
+.socialIcon:hover {
+    transform: translateY(-5px);
+}
+
+.underline {
+    text-decoration: underline;
+}

@@ -1,0 +1,72 @@
+.servicesSection {
+    padding: 40px 0;
+    position: relative;
+    height: 250vh;
+}
+
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 200vh;
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #68BCDF, #ffffff);
+    box-shadow: -12px 12px 24px #ffffff;
+    color: black;
+    padding: 30px;
+    text-align: left;
+    position: sticky;
+    top: 20%;
+    margin: 50px auto;
+    width: 60%;
+    transition: transform 0.3s ease;
+}
+
+.serviceCard:nth-child(n + 2) {
+    transform: translateY(20%); /* Adjust this value to control the overlap */
+}
+
+.serviceCard:nth-child(3) {
+    transform: translateY(40%); /* Adjust this value to control the overlap */
+}
+
+.serviceCard:nth-child(4) {
+    transform: translateY(60%); /* Adjust this value to control the overlap */
+}
+
+.serviceCard:nth-child(5) {
+    transform: translateY(80%); /* Adjust this value to control the overlap */
+}
+
+.serviceCard:nth-child(6) {
+    transform: translateY(100%);
+}
+
+.serviceText {
+    flex: 1;
+    margin-right: 25%;
+}
+
+.serviceImage {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.serviceTitle {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.serviceDescription {
+    margin-top: 8px;
+    font-size: 1em;
+}

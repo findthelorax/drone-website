@@ -1,0 +1,130 @@
+.navbar {
+    color: var(--navbar-logo-color);
+    position: sticky;
+    width: 70%;
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+    font-family: 'Teko', sans-serif;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+.navContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 3rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+    display: inline-block;
+}
+
+.logo span {
+    opacity: 0;
+    filter: blur(5px);
+    animation: fadeIn 0.5s forwards;
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black; /* Add this line */
+}
+
+.logoText span:nth-child(1) {
+    animation-delay: .2s;
+}
+
+.logoText span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.logoText span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.logoText span:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.logoText span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.logoText span:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+.logoText span:nth-child(7) {
+    animation-delay: 1.4s;
+}
+
+.logoText span:nth-child(8) {
+    animation-delay: 1.6s;
+}
+
+.logoText span:nth-child(9) {
+    animation-delay: 1.8s;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.navLinks {
+    font-family: 'Oswald', sans-serif;
+    color: var(--navbar-font-color);
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.navLinks li {
+    display: inline;
+}
+
+.navLinks a {
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+    margin-right: 25px;
+    font-size: 2rem;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+.navLinks a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: white;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navLinks a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navLinks a:hover {
+    color: var(--navbarLink-hover-color);
+}

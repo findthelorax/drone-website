@@ -1,0 +1,33 @@
+.videoContainer {
+    position: relative;
+    width: 80%;
+    height: 50vh;
+    overflow: hidden;
+    margin: auto;
+}
+
+.iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.carouselItem {
+    padding: 50px;
+}
+
+.videoRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.videoWrapper {
+    flex: 1;
+    margin: 0 5px;
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}

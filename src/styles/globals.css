@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Manrope:wght@200..800&family=Oswald:wght@200..700&family=Teko:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: #68BCDF;
+  --secondary-color: #ED6A5A;
+  --accent-color: #6D545D;
+  --dark-accent-color: #2E4E2C;
+  --brand-color: #68BCDF;
+  --home-card-font-color: #ffffff;
+  --home-slogan-font-color: #000000;
+  --navbar-font-color: #000000;
+  --navbarLink-hover-color: #68BCDF;
+  --navbar-logo-color: #68BCDF;
+  --section-font-color: #ffffff;
+  --button-color: #68BCDF;
+  --contactButton-color: #68BCDF;
+  --contactButton-text: #000000;
+  --contactButton-bg: rgb(255, 238, 54);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: 'Teko', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}

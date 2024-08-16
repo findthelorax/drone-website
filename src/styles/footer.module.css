@@ -1,0 +1,58 @@
+.footer {
+    font-family: 'Teko', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    background-color: aliceblue;
+    color: #000;
+    font-size: 2rem;
+    padding: 10px 50px;
+    margin: 10px auto;
+    border-radius: 15px;
+    box-sizing: border-box;
+}
+
+.left {
+    flex: 1;
+}
+
+.right {
+    display: flex;
+    gap: 15px;
+}
+
+.right a {
+    text-decoration: none;
+    color: #000;
+    position: relative;
+    transition: text-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+}
+
+.right a.linkedin:hover {
+    text-shadow: 0 0 10px rgba(0, 119, 255, 0.5), 0 0 20px rgba(0, 119, 255, 0.7); /* Blue glow */
+}
+
+.right a.youtube:hover {
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.7); /* Red glow */
+}
+
+.right a.instagram:hover {
+    text-shadow: 0 -5px 10px rgba(0, 255, 0, 0.685), 0 5px 10px rgb(255, 0, 170); /* Pink glow */
+}
+
+.right a.twitter:hover {
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.5), 0 0 20px rgba(0, 0, 255, 0.7); /* Blue glow */
+}
+
+.right a::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border-radius: 5px;
+    z-index: -1;
+    opacity: 0;
+}
