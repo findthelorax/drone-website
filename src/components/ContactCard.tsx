@@ -13,7 +13,7 @@ const ContactCard: React.FC = () => {
         <section id="contact">
             <div className={styles.contactCardContainer}>
                 <div className={styles.contactCard}>
-                    <h2>CONTACT FORM</h2>
+                    {/* <h2>Have a question? Please reach out.</h2> */}
                     <div>
                         <label className="sr-only" htmlFor="name">
                             Name
@@ -22,7 +22,7 @@ const ContactCard: React.FC = () => {
                             className={styles.contactInput}
                             id="name"
                             type="text"
-                            placeholder="Name"
+                            placeholder="NAME"
                         />
                     </div>
                     <div>
@@ -33,7 +33,7 @@ const ContactCard: React.FC = () => {
                             className={styles.contactInput}
                             id="email"
                             type="email"
-                            placeholder="Email"
+                            placeholder="EMAIL"
                         />
                     </div>
                     <div>
@@ -43,7 +43,7 @@ const ContactCard: React.FC = () => {
                         <textarea
                             className={styles.contactInput}
                             id="message"
-                            placeholder={randomFact}
+                            placeholder={randomFact.toUpperCase()}
                             rows={4}
                         ></textarea>
                     </div>

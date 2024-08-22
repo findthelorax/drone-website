@@ -7,9 +7,9 @@ const Footer: React.FC = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.left}>
-                <p>© &nbsp;{year}&nbsp; Brett Ferrante</p>
+                <p>© &nbsp;{year}&nbsp; DKS Drone</p>
             </div>
-            <div className={styles.right}>
+            {/* <div className={styles.right}>
                 <a
                     href="https://www.linkedin.com"
                     target="_blank"
@@ -42,7 +42,7 @@ const Footer: React.FC = () => {
                 >
                     Twitter
                 </a>
-            </div>
+            </div> */}
         </footer>
     );
 };

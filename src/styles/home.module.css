@@ -1,25 +1,14 @@
 .mainContainer {
-    height: 100vh;
-    overflow-y: scroll;
     position: relative;
-}
-
-.section {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    background-size: cover;
-    background-position: center;
-    color: var(--section-font-color);
-    position: relative;
+    box-shadow: 0 13px 13px rgba(0, 0, 0);
+    z-index: 1;
 }
 
 .section1 {
     position: relative;
     height: 100vh;
     overflow: hidden;
+    z-index: 1;
 }
 
 .section1 video {
@@ -35,10 +24,17 @@
 
 .section2 {
     background: white;
+    padding-top: 5%;
 }
 
 .section3, .section4 {
     background-color: rgb(255, 255, 255);
+}
+
+.section4 {
+    border: 10px solid rgb(255, 255, 255);
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
 }
 
 .homeCard {
@@ -58,6 +54,7 @@
     bottom: 5%;
     right: 5%;
     left: 50%;
+    z-index: -1;
 }
 
 @media (max-width: 1420px) {
@@ -101,7 +98,7 @@
         font-size: 1.3rem;
         padding: 15px;
         max-width: 70%;
-        max-height: 30%;
+        max-height: 35%;
         bottom: 2%;
         right: 2%;
         left: 20%;
@@ -138,7 +135,7 @@
 
 @media (max-width: 660px) {
     .homeSlogan {
-        top: 20%;
+        top: 15%;
         left: 20%;
         white-space: wrap;
         font-size: 1.5rem;
@@ -200,14 +197,13 @@
     .homeButton {
         font-size: 1rem;
         padding: 15px;
-        bottom: 30%;
-        right: 20%;
+        bottom: 35%;
+        right: 5%;
     }
 }
 
-.navbar {
+.navbarContainer {
     position: fixed;
     width: 100%;
-    z-index: 1;
-    color: var(--navbar-font-color);
+    z-index: 99;
 }

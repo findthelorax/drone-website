@@ -1,0 +1,17 @@
+/* .droneContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+} */
+
+.drone {
+    position: absolute;
+    top: 10%;
+    left: 40%;
+    width: 100px;
+    height: auto;
+    transform-origin: center;
+    transition: transform 0.1s ease-out;
+    z-index: 99;
+    background-color: transparent;
+}

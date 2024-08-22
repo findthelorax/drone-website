@@ -5,6 +5,14 @@ import styles from "../styles/navbar.module.css";
 
 const Navbar = () => {
 
+    const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        e.preventDefault();
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth"
+        });
+    };
+
     return (
         <nav className={styles.navbar}>
             <div className={styles.navContent}>
@@ -21,7 +29,7 @@ const Navbar = () => {
                         <Link href="/about">ABOUT</Link>
                     </li>
                     <li>
-                        <Link href="/contact">CONTACT</Link>
+                        <a href="#contact" onClick={handleContactClick}>CONTACT</a>
                     </li>
                 </ul>
             </div>

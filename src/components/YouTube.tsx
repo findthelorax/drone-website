@@ -1,15 +1,19 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import { useMediaQuery } from 'react-responsive';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
+import { useMediaQuery } from "react-responsive";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
-const videoIds = ['f4mUhKDI09k', 'lV0zxH9hjhk', 'QbbavdKtLF0', 'Srbw9wcmuSI'];
+const videoIds = ["f4mUhKDI09k", "lV0zxH9hjhk", "QbbavdKtLF0", "Srbw9wcmuSI"];
 
 const YouTube: React.FC = () => {
     const isLargeScreen = useMediaQuery({ minWidth: 992 }); // Change this value based on your needs
 
     const renderVideos = (videoIds: string[]) => (
-        <div className={`grid ${isLargeScreen ? 'grid-cols-2' : 'grid-cols-1'} gap-4`}>
+        <div
+            className={`grid ${
+                isLargeScreen ? "grid-cols-2" : "grid-cols-1"
+            } gap-4`}
+        >
             {videoIds.map((videoId, index) => (
                 <div key={index}>
                     <iframe
@@ -26,7 +30,8 @@ const YouTube: React.FC = () => {
     );
 
     const videoGroups = isLargeScreen
-        ? videoIds.reduce((resultArray: string[][], item, index) => { // Add type annotation here
+        ? videoIds.reduce((resultArray: string[][], item, index) => {
+              // Add type annotation here
               const chunkIndex = Math.floor(index / 2);
               if (!resultArray[chunkIndex]) {
                   resultArray[chunkIndex] = []; // start a new chunk
@@ -37,7 +42,7 @@ const YouTube: React.FC = () => {
         : videoIds.map((video) => [video]);
 
     return (
-        <section id='portfolio' className='div-bg'>
+        <section id="portfolio" className="div-bg">
             <div className="flex flex-col items-center space-y-4 p-4">
                 <Carousel
                     infiniteLoop

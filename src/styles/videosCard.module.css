@@ -1,7 +1,7 @@
 .videoContainer {
     position: relative;
-    width: 80%;
-    height: 50vh;
+    width: 100%;
+    height: 80vh;
     overflow: hidden;
     margin: auto;
 }
@@ -10,31 +10,50 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 80vh;
     border: none;
-}
-
-.carouselItem {
-    padding: 50px;
+    object-fit: cover;
 }
 
 .videoRow {
     display: flex;
     justify-content: space-between;
+    margin: 50px 80px;
 }
 
-.videoWrapper {
-    flex: 1;
-    margin: 0 5px;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
+@media (max-width: 1000px) {
+    .videoContainer {
+        position: relative;
+        /* margin: 0px -40px; */
+        width: auto;
+        height: 100vh;
+    }
+}
+
+@media (max-width: 880px) {
+    .videoContainer {
+        position: relative;
+        margin: 0px -40px;
+        height: 80vh;
+        padding: 56.25%;
+    }
 }
 
 @media (max-width: 480px) {
     .videoContainer {
-        width: 100%;
+        position: relative;
+        margin: 0px -30px;
         height: 100vh;
+        padding: 56.25%;
+    }
+    .iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: auto;
+        height: 80vh;
+        border: none;
+        object-fit: cover;
     }
 }

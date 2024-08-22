@@ -1,7 +1,7 @@
 .servicesSection {
     padding: 40px 0;
     position: relative;
-    height: 250vh;
+    min-height: 250vh;
 }
 
 .servicesContainer {
@@ -25,25 +25,25 @@
     text-align: left;
     position: sticky;
     top: 20%;
-    margin: 50px auto;
+    margin: 20px auto;
     width: 60%;
     transition: transform 0.3s ease;
 }
 
-.serviceCard:nth-child(n + 2) {
-    transform: translateY(20%); /* Adjust this value to control the overlap */
+.serviceCard:nth-child(2) {
+    transform: translateY(20%);
 }
 
 .serviceCard:nth-child(3) {
-    transform: translateY(40%); /* Adjust this value to control the overlap */
+    transform: translateY(40%);
 }
 
 .serviceCard:nth-child(4) {
-    transform: translateY(60%); /* Adjust this value to control the overlap */
+    transform: translateY(60%);
 }
 
 .serviceCard:nth-child(5) {
-    transform: translateY(80%); /* Adjust this value to control the overlap */
+    transform: translateY(80%);
 }
 
 .serviceCard:nth-child(6) {
@@ -56,9 +56,10 @@
 }
 
 .serviceImageWrapper {
-    width: 300px;
+    width: 250px;
     height: auto;
     overflow: hidden;
+    border-radius: 20px;
 }
 
 .serviceImage {
@@ -75,4 +76,60 @@
 .serviceDescription {
     margin-top: 8px;
     font-size: 1em;
+}
+
+@media (max-width: 880px) {
+    .serviceCard {
+        width: 100vw;
+        height: auto;
+    }
+    .serviceText {
+        width: 100%;
+        height: auto;
+    }
+    .serviceImage {
+        width: 100vw;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesSection {
+        height: 500vh;
+    }
+    .serviceCard:nth-child(2) {
+        transform: translateY(10%);
+    }
+    
+    .serviceCard:nth-child(3) {
+        transform: translateY(20%);
+    }
+    
+    .serviceCard:nth-child(4) {
+        transform: translateY(30%);
+    }
+    
+    .serviceCard:nth-child(5) {
+        transform: translateY(40%);
+    }
+    
+    .serviceCard:nth-child(6) {
+        transform: translateY(50%);
+    }
+    .serviceTitle {
+        width: 100%;
+        height: auto;
+        font-size: 1.5rem;
+    }
+    .serviceText {
+        width: 100%;
+        height: auto;
+    }
+    .serviceImageWrapper {
+        width: 100%; /* Make the wrapper take full width */
+    }
+    .serviceImage {
+        width: 100%; /* Make the image take full width */
+        height: auto; /* Maintain aspect ratio */
+    }
 }

@@ -1,16 +1,24 @@
-.footer {
+.footerContainer {
     font-family: 'Teko', sans-serif;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
-    width: 90%;
-    background-color: aliceblue;
-    color: #000;
+    color: aliceblue;
     font-size: 2rem;
-    padding: 10px 50px;
-    margin: 10px auto;
+    letter-spacing: .13rem;
     border-radius: 15px;
+    position: sticky;
+    z-index: 0;
+    bottom: 0;
     box-sizing: border-box;
+}
+
+.footer {
+    display: flex;
+    width: 90%;
+    margin-bottom: 10px;
+    margin-top: -20px;
 }
 
 .left {
@@ -24,25 +32,28 @@
 
 .right a {
     text-decoration: none;
-    color: #000;
     position: relative;
-    transition: text-shadow 0.3s ease-in-out; /* Add transition for smooth effect */
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.right a:hover {
+    transform: scale(1.2);
 }
 
 .right a.linkedin:hover {
-    text-shadow: 0 0 10px rgba(0, 119, 255, 0.5), 0 0 20px rgba(0, 119, 255, 0.7); /* Blue glow */
+    text-shadow: 0 0 10px rgba(0, 119, 255, 0.5), 0 0 20px rgba(0, 119, 255, 0.7);
 }
 
 .right a.youtube:hover {
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.7); /* Red glow */
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.7);
 }
 
 .right a.instagram:hover {
-    text-shadow: 0 -5px 10px rgba(0, 255, 0, 0.685), 0 5px 10px rgb(255, 0, 170); /* Pink glow */
+    text-shadow: 0 -5px 10px rgba(0, 255, 0, 0.685), 0 5px 10px rgb(255, 0, 170);
 }
 
 .right a.twitter:hover {
-    text-shadow: 0 0 10px rgba(0, 0, 255, 0.5), 0 0 20px rgba(0, 0, 255, 0.7); /* Blue glow */
+    text-shadow: 0 0 10px rgba(0, 0, 255, 0.5), 0 0 20px rgba(0, 0, 255, 0.7);
 }
 
 .right a::before {
@@ -55,4 +66,21 @@
     border-radius: 5px;
     z-index: -1;
     opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 1.3rem;
+        padding: 5%;
+    }
+    .right {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 25px;
+    }
 }
