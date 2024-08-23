@@ -14,21 +14,24 @@ const FAQ = () => {
             <div className={styles.leftSide}>
                 <h1>FAQ</h1>
                 <p>Ask Me Anything!</p>
-                <img src="/path/to/image.jpg" alt="FAQ Image" />
+                <img src="/assets/declan1-nobg.png" alt="FAQ Image" />
             </div>
             <div className={styles.rightSide}>
                 {faqs.map((faq, index) => (
-                    <details
-                        key={index}
-                        className={styles.faqItem}
-                        open={activeIndex === index}
-                        onClick={() => toggleAnswer(index)}
-                    >
-                        <summary className={styles.questionBubble}>
-                            {faq.question}
-                        </summary>
-                        <div className={styles.answer}>{faq.answer}</div>
-                    </details>
+                    <div key={index} className={styles.faqItem}>
+                        <div
+                            className={`${styles.questionBubble} ${activeIndex === index ? styles.open : ''}`}
+                            onClick={() => toggleAnswer(index)}
+                        >
+                            <span>{faq.question}</span>
+                            <span className={`${styles.chevron} ${activeIndex === index ? styles.open : ''}`}></span>
+                        </div>
+                        {activeIndex === index && (
+                            <div className={styles.answerContainer}>
+                                <div className={styles.answer}>{faq.answer}</div>
+                            </div>
+                        )}
+                    </div>
                 ))}
             </div>
         </div>

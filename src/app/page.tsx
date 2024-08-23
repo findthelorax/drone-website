@@ -12,17 +12,17 @@ import YouTube from "@/components/YouTube";
 import VideosCard from "@/components/VideosCard";
 import homeStyles from "@/styles/home.module.css";
 import footerStyles from "@/styles/footer.module.css";
+import navStyles from "@/styles/navbar.module.css";
 import DroneFlying from "@/components/DroneFlying";
 import FAQ from "@/components/FAQ";
+import Metrics from "@/components/Metrics";
 
 export default function Home() {
     return (
-        <div className={homeStyles.ALLContainer}>
-            <div className={homeStyles.navbarContainer}>
-                <Navbar />
-            </div>
+        <>
             <main className={homeStyles.mainContainer}>
                 <section id="section1" className={`${homeStyles.section1}`}>
+                    <Navbar />
                     <VideoBackground />
                     <HomeSlogan />
                     <HomeCard />
@@ -36,6 +36,7 @@ export default function Home() {
                 </section>
                 <section id="section4" className={`${homeStyles.section4}`}>
                     <FAQ />
+                    <Metrics />
                 </section>
             </main>
 
@@ -44,6 +45,6 @@ export default function Home() {
                 <ContactSection />
                 <Footer />
             </div>
-        </div>
+        </>
     );
 }
