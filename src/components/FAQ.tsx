@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import styles from "@/styles/faq.module.css";
 import { faqs } from "@/data/faq";
 
@@ -14,7 +15,7 @@ const FAQ = () => {
             <div className={styles.leftSide}>
                 <h1>FAQ</h1>
                 <p>Ask Me Anything!</p>
-                <img src="/assets/declan1-nobg.png" alt="FAQ Image" />
+                <Image src="/assets/declan1-nobg.png" alt="FAQ Image" width={500} height={500} />
             </div>
             <div className={styles.rightSide}>
                 {faqs.map((faq, index) => (

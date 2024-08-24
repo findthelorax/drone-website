@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import styles from "@/styles/droneFlying.module.css";
 
 const DroneFlying: React.FC = () => {
@@ -36,12 +37,14 @@ const DroneFlying: React.FC = () => {
 
     return (
         <div className={styles.droneContainer}>
-            <img
-                src="/assets/drone4.png"
-                alt="Drone"
-                className={styles.drone}
-                style={{ transform: `rotate(${rotation}deg)` }}
-            />
+            <div className={styles.drone} style={{ transform: `rotate(${rotation}deg)` }}>
+                <Image
+                    src="/assets/drone4.png"
+                    alt="Drone"
+                    width={500}
+                    height={500}
+                />
+            </div>
         </div>
     );
 };
