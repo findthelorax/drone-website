@@ -9,6 +9,7 @@
     height: 100vh;
     overflow: hidden;
     z-index: 1;
+    background-color: white;
 }
 
 .section1 video {

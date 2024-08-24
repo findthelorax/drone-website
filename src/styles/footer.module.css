@@ -1,5 +1,6 @@
 .footerContainer {
     font-family: 'Teko', sans-serif;
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -18,6 +19,10 @@
     display: flex;
     width: 90%;
     margin-bottom: 10px;
+}
+
+.hiddenFooter {
+    display: none;
 }
 
 .left {
@@ -71,10 +76,9 @@
     .footer {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        font-size: 1.3rem;
-        padding: 5%;
+        align-items: left;
+        text-align: left;
+        font-size: 1.2rem;
     }
     .right {
         display: flex;

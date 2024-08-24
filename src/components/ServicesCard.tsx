@@ -1,6 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
-import styles from '../styles/services.module.css';
+import styles from '../styles/services2.module.css';
 import { services } from '../data/servicesData';
 
 const ServicesCard: React.FC = () => {
@@ -9,18 +8,19 @@ const ServicesCard: React.FC = () => {
             <div className={styles.servicesContainer}>
                 {services.map(service => (
                     <div key={service.id} className={styles.serviceCard}>
-                        <div className={styles.serviceText}>
-                            <h2 className={styles.serviceTitle}>{service.title}</h2>
-                            <p className={styles.serviceDescription}>{service.description}</p>
-                        </div>
-                        <div className={styles.serviceImageWrapper}>
-                            <Image 
-                                src={service.image} 
-                                alt={service.title} 
-                                className={styles.serviceImage} 
-                                width={300} 
-                                height={300}
-                            />
+                        <div className={styles.serviceCardInner}>
+                            <div 
+                                className={styles.serviceCardFront} 
+                                style={{ backgroundImage: `url(${service.image})` }}
+                            >
+                                <div className={styles.serviceText}>
+                                    <h2>{service.title.toUpperCase()}</h2>
+                                </div>
+                            </div>
+                            <div className={styles.serviceCardBack}>
+                                <p className={styles.serviceDescription}>{service.description}</p>
+                                <button className={styles.serviceButton}>Learn More</button>
+                            </div>
                         </div>
                     </div>
                 ))}

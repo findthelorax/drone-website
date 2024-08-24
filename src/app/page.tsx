@@ -8,11 +8,9 @@ import HomeButton from "@/components/HomeButton";
 import ServicesCard from "@/components/ServicesCard";
 import ContactSection from "@/components/ContactSection";
 import VideoBackground from "@/components/VideoBackground";
-import YouTube from "@/components/YouTube";
+import FooterContainer from "@/components/FooterContainer";
 import VideosCard from "@/components/VideosCard";
 import homeStyles from "@/styles/home.module.css";
-import footerStyles from "@/styles/footer.module.css";
-import navStyles from "@/styles/navbar.module.css";
 import DroneFlying from "@/components/DroneFlying";
 import FAQ from "@/components/FAQ";
 import Metrics from "@/components/Metrics";
@@ -40,11 +38,11 @@ export default function Home() {
                 </section>
             </main>
 
-            <div className={footerStyles.footerContainer}>
+            <FooterContainer>
                 <DroneFlying />
                 <ContactSection />
                 <Footer />
-            </div>
+            </FooterContainer>
         </>
     );
 }

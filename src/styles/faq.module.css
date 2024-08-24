@@ -97,3 +97,26 @@
     transition: max-height 0.3s ease-out;
     overflow: hidden;
 }
+
+@media screen and (max-width: 768px) {
+    .faqContainer {
+        flex-direction: column;
+        min-height: 100%;
+    }
+
+    .leftSide {
+        padding: 0;
+    }
+
+    .leftSide img {
+        margin-left: auto;
+        margin-bottom: 5%;
+    }
+
+    .rightSide {
+        padding: 0;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    
+}

@@ -88,3 +88,40 @@
         );
     }
 }
+
+@media screen and (max-width: 768px) {
+    .svgRect {
+        height: 50px;
+        width: 50px;
+        top: 10%;
+        left: 10%;
+    }
+
+    .svgCircle {
+        height: 50px;
+        width: 50px;
+        top: 5%;
+        left: 15%;
+    }
+
+    .svgTriangle {
+        height: 50px;
+        width: 50px;
+        top: 15%;
+        left: 70%;
+    }
+
+    .svgBlob1 {
+        height: 50px;
+        width: 50px;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    .svgBlob2 {
+        height: 50px;
+        width: 50px;
+        right: 3%;
+    }
+    
+}

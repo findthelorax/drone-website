@@ -12,21 +12,13 @@ const ContactSection: React.FC = () => {
                 className={`${styles.contactSectionRow} ${styles.contactSectionRowMd} ${styles.contactSectionRowLg}`}
             >
                 <h1 className={styles.contactTitle}>DKS DRONE</h1>
-                {/* <p className={styles.contactText}>Have a question? Please reach out.</p> */}
-                {/* <p className={`${styles.contactSubText} ${styles.underline}`}>
-                    Address
-                </p> */}
                 <p className={`${styles.contactSubText}`}>{userInfo.address}</p>
-                {/* <p className={`${styles.contactSubText} ${styles.underline}`}>
-                    Phone
-                </p> */}
-                <p className={`${styles.contactSubText}`}>{userInfo.phone}</p>
-                {/* <p className={`${styles.contactSubText} ${styles.underline}`}>
-                    Email
-                </p> */}
-                <p className={`${styles.contactSubText}`}>
-                    <a href={`mailto:${userInfo.email}`}>{userInfo.email}</a>
-                </p>
+                <div className={styles.contactInfoContainer}>
+                    <p className={`${styles.contactSubText}`}>{userInfo.phone}</p>
+                    <p className={`${styles.contactSubText}`}>
+                        <a href={`mailto:${userInfo.email}`}>{userInfo.email}</a>
+                    </p>
+                </div>
                 <div className={styles.socialIcons}>
                     <a
                         href={userInfo.socials.youtube}
@@ -56,9 +48,6 @@ const ContactSection: React.FC = () => {
                 <svg className={stylesSVG.svgRect}>
                     <rect x="0" y="0" width="50" height="30" />
                 </svg>
-                {/* <svg className={stylesSVG.svgCircle}>
-                    <circle cx="70" cy="30" r="20" />
-                </svg> */}
                 <svg
                     className={stylesSVG.svgTriangle}
                     viewBox="0 10 100 100"
@@ -79,20 +68,6 @@ const ContactSection: React.FC = () => {
                         fill="#8A3FFC"
                     />
                 </svg>
-
-                {/* <svg
-                    className={stylesSVG.svgBlob2}
-                    width="150"
-                    height="150"
-                    viewBox="0 0 250 250"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <path
-                        d="M220,352.96025201212615C256.56873938081833,364.4820468462447,289.2594242212984,416.5635222687635,323.2999592659152,398.92077786836063C356.52181502675444,381.7023437595164,330.5819946155335,325.89861786400223,341.35433464890684,290.0639577768743C349.03247461413304,264.52228949469406,378.7590439275013,246.61824060367357,377.0857480398956,220C375.410276361847,193.3471476376171,339.7820448705357,180.63486751546486,332.8540171446362,154.84370282241366C322.2388911275455,115.32647307450108,364.8062082626513,50.454565250723434,327.2064600395971,34.312964311815456C286.9507612348243,17.031161737799806,257.7211005523543,84.11758194835988,220,106.39538613968485C203.28924893312904,116.26463265440486,186.25520452451113,124.51752172141056,167.31361360400032,128.74450189492276C137.62079870672906,135.37071087563854,102.62598528255816,120.08489694589649,78.08451501519393,138.06505654184585C53.676579947217576,155.9473823825021,40.97882149817505,189.79466567778746,42.757205662894094,219.99999999999997C44.523549171762475,250.0008273081246,67.90126863450463,273.69238237980215,87.41541984956375,296.5477430402478C104.42625999652361,316.4711761637918,124.39156281257047,333.58867191792206,148.49778741343118,343.84546505352785C170.9898779214772,353.41547128005715,196.68641355881994,345.6147879799789,220,352.96025201212615"
-                        transform="scale(.5)"
-                        fill="#8A3FFC"
-                    />
-                </svg> */}
             </div>
             <div
                 className={`${styles.contactCardContainer} ${styles.contactCardContainerMd} ${styles.contactCardContainerLg}`}
