@@ -7,7 +7,7 @@ const useShrinkOnScroll = (selector: string, minScale: number = 0.25, maxScale: 
             const maxScroll = document.body.scrollHeight - window.innerHeight;
             const scrollFraction = scrollY / maxScroll;
 
-            const element = document.querySelector(selector);
+            const element = document.querySelector(selector) as HTMLElement;
 
             if (element) {
                 const scale = maxScale - (scrollFraction * (maxScale - minScale) * speedFactor);
