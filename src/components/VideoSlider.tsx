@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef, use } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { gsap } from "gsap";
 import dynamic from "next/dynamic";
 import { videos } from "@/data/videos";
@@ -9,7 +9,7 @@ import styles from "@/styles/videoSlider.module.css";
 const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const VideoSlider = () => {
-    const sliderRef = useRef(null);
+    const sliderRef = useRef<HTMLDivElement | null>(null);
     const [iAnimating, setIAnimating] = useState(false);
     const [isClient, setIsClient] = useState(false);
 
@@ -26,12 +26,13 @@ const VideoSlider = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             handleClick();
-        }, 10000); // 10 seconds
+        }, 10000);
 
-        return () => clearInterval(interval); // Cleanup on unmount
+        return () => clearInterval(interval);
     }, [iAnimating]);
 
     const initializeCards = () => {
+        if (!sliderRef.current) return;
         const cards = Array.from(sliderRef.current.querySelectorAll(`.${styles.videoSliderCard}`));
         gsap.to(cards, {
             y: (i) => 0 + 20 * i + "%",
@@ -47,10 +48,12 @@ const VideoSlider = () => {
         if (iAnimating) return;
         setIAnimating(true);
 
-        const slider = sliderRef.current
-        const cards = Array.from(sliderRef.current.querySelectorAll(`.${styles.videoSliderCard}`));
+        if (!sliderRef.current) return; // Add null check
+        const slider = sliderRef.current;
+        const cards = Array.from(slider.querySelectorAll(`.${styles.videoSliderCard}`));
         const lastCard = cards.pop();
 
+        if (!lastCard) return; // Add null check
         gsap.to(lastCard, {
             y: "+=150%",
             duration: 0.75,
@@ -62,7 +65,7 @@ const VideoSlider = () => {
                     setTimeout(() => {
                         setIAnimating(false);
                     }, 1000);
-            }, 300);
+                }, 300);
             },
         });
     };
