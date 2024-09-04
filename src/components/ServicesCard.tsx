@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../styles/services2.module.css';
 import { services } from '../data/servicesData';
 
@@ -9,10 +10,16 @@ const ServicesCard: React.FC = () => {
                 {services.map(service => (
                     <div key={service.id} className={styles.serviceCard}>
                         <div className={styles.serviceCardInner}>
-                            <div 
-                                className={styles.serviceCardFront} 
-                                style={{ backgroundImage: `url(${service.image})` }}
-                            >
+                            <div className={styles.serviceCardFront}>
+                                <div className={styles.imageWrapper}>
+                                    <Image 
+                                        src={service.image} 
+                                        alt={service.title}
+                                        layout="fill"
+                                        objectFit="cover"
+                                        className={styles.serviceImage} 
+                                    />
+                                </div>
                                 <div className={styles.serviceText}>
                                     <h2>{service.title.toUpperCase()}</h2>
                                 </div>

@@ -55,7 +55,7 @@ const VideoSlider = () => {
 
         if (!lastCard) return; // Add null check
         gsap.to(lastCard, {
-            y: "+=150%",
+            y: "+=100%",
             duration: 0.75,
             ease: "power3.inOut",
             onStart: () => {

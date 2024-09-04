@@ -4,7 +4,7 @@ import styles from "../styles/videoBackground.module.css";
 import useShrinkOnScroll from "../hooks/useShrinkOnScroll";
 
 const VideoBackground: React.FC = () => {
-    useShrinkOnScroll(`.${styles.videoContainer}`, 0.25, 1, 1);
+    // useShrinkOnScroll(`.${styles.videoContainer}`, 0.25, 1, 1);
 
     return (
         <>
