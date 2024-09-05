@@ -5,6 +5,9 @@
     background-color: rgb(255, 255, 255);
     color: black;
     min-height: 500px;
+    font-family: 'Jura';
+    font-weight: 500;
+    font-size: 20px;
 }
 
 .leftSide {
@@ -20,6 +23,8 @@
 }
 
 .leftSide p {
+    font-family: 'Jura';
+    font-weight: 600;
     font-size: 1.5rem;
 }
 

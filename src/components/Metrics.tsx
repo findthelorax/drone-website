@@ -16,7 +16,7 @@ const MetricCard: React.FC<MetricCardProps> = ({ title, value, unit }) => {
 
     return (
         <div className={styles.card} ref={ref}>
-            <h3>{title}</h3>
+            <h3>{title.toUpperCase()}</h3>
             <p>{displayNumber}{unit && ` ${unit}`}</p>
         </div>
     );

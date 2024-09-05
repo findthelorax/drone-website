@@ -2,6 +2,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
+@font-face {
+  font-family: 'Jura';
+  src: url('/assets/fonts/Jura.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ostritch Sans';
+  src: url('/assets/fonts/Ostrich-Inline.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Ostritch Round';
+  src: url('/assets/fonts/Ostrich-Rounded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @tailwind base;
 @tailwind components;

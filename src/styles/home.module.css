@@ -44,7 +44,7 @@
     background-color: rgba(0, 0, 0, 0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     color: var(--home-card-font-color);
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Jura', sans-serif;
     font-weight: 300;
     font-size: 2rem;
     line-height: 1.5;
@@ -113,7 +113,8 @@
     left: 20%;
     white-space: nowrap;
     color: var(--home-slogan-font-color);
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Jura', sans-serif;
+    font-weight: 900;
     font-size: 2rem;
     line-height: 1.5;
     letter-spacing: 1.5px;
@@ -160,7 +161,8 @@
     border-radius: 5px;
     background-color: var(--primary-color);
     color: var(--home-card-font-color);
-    font-family: 'Manrope', sans-serif;
+    font-family: 'Jura', sans-serif;
+    font-weight: 900;
     font-size: 1.5rem;
     line-height: 1.5;
     letter-spacing: 1.5px;

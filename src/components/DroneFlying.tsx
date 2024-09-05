@@ -39,7 +39,7 @@ const DroneFlying: React.FC = () => {
         <div className={styles.droneContainer}>
             <div className={styles.drone} style={{ transform: `rotate(${rotation}deg)` }}>
                 <Image
-                    src="/assets/drone4.png"
+                    src="/assets/dron1-nobg.png"
                     alt="Drone"
                     width={500}
                     height={500}

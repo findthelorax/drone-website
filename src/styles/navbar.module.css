@@ -14,7 +14,7 @@
     transition: background-color 0.3s ease;
     display: flex;
     justify-content: center;
-    font-family: 'Teko', sans-serif;
+    font-family: 'Jura', sans-serif;
     line-height: 1.5;
     letter-spacing: 1.5px;
     z-index: 99;
@@ -92,7 +92,7 @@
 }
 
 .navLinks {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Jura', sans-serif;
     color: var(--navbar-font-color);
     list-style: none;
     display: flex;
@@ -132,7 +132,13 @@
 
 .navLinks a:hover {
     color: var(--navbarLink-hover-color);
+    text-shadow: 
+        -1px -1px 0 black,  
+        1px -1px 0 black,
+        -1px 1px 0 black,
+        1px 1px 0 black;
 }
+
 
 @media (max-width: 1050px) {
     .navbar {

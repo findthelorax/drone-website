@@ -35,7 +35,15 @@ const Navbar = () => {
                         <Link href="/services">SERVICES</Link>
                     </li>
                     <li>
-                        <Link href="/about">ABOUT</Link>
+                        <Link href="/about">
+                            {/* <div className={styles.aboutText}> */}
+                                <span>A</span>
+                                <span>B</span>
+                                <span>O</span>
+                                <span>U</span>
+                                <span>T</span>
+                            {/* </div> */}
+                        </Link>
                     </li>
                     <li>
                         <a href="#contact" onClick={handleContactClick}>

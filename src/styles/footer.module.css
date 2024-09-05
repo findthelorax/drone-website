@@ -1,12 +1,12 @@
 .footerContainer {
-    font-family: 'Teko', sans-serif;
+    font-family: 'Jura', sans-serif;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
     color: aliceblue;
-    font-size: 2rem;
+    font-size: 1.5rem;
     letter-spacing: .13rem;
     border-radius: 15px;
     position: sticky;
