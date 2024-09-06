@@ -11,11 +11,11 @@ import ContactSection from "@/components/ContactSection";
 import VideoBackground from "@/components/VideoBackground";
 import FooterContainer from "@/components/FooterContainer";
 import VideosCard from "@/components/VideosCard";
-import homeStyles from "@/styles/home.module.css";
 import DroneFlying from "@/components/DroneFlying";
 import FAQ from "@/components/FAQ";
 import Metrics from "@/components/Metrics";
 import VideoSlider from "@/components/VideoSlider";
+import homeStyles from "@/styles/home.module.css";
 
 export default function Home() {
     return (

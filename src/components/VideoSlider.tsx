@@ -35,7 +35,7 @@ const VideoSlider = () => {
         if (!sliderRef.current) return;
         const cards = Array.from(sliderRef.current.querySelectorAll(`.${styles.videoSliderCard}`));
         gsap.to(cards, {
-            y: (i) => 0 + 20 * i + "%",
+            y: (i) => 0 + 10 * i + "%",
             z: (i) => 15 + i,
             scale: (i) => 1 + 0.1 * i,
             duration: 1,

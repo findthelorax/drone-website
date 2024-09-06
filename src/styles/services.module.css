@@ -12,7 +12,7 @@
     height: 200px;
     perspective: 1000px;
     overflow: visible;
-    margin-top: 10%;
+    margin-top: 11%;
 }
 
 .serviceFront, .serviceBack {
@@ -43,6 +43,8 @@
 .serviceImage {
     width: 100%;
     height: auto;
+    border-radius: 25px;
+
 }
 
 .serviceTitle {

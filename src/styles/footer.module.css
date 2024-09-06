@@ -13,6 +13,8 @@
     z-index: 0;
     bottom: 0;
     box-sizing: border-box;
+    height: 100vh;
+    transition: transform 0.3s ease-in-out;
 }
 
 .footer {
@@ -21,69 +23,18 @@
     margin-bottom: 10px;
 }
 
-.hiddenFooter {
-    display: none;
-}
-
-.left {
-    flex: 1;
-}
-
-.right {
-    display: flex;
-    gap: 15px;
-}
-
-.right a {
-    text-decoration: none;
-    position: relative;
-    transition: text-shadow 0.3s ease-in-out;
-}
-
-.right a:hover {
-    transform: scale(1.2);
-}
-
-.right a.linkedin:hover {
-    text-shadow: 0 0 10px rgba(0, 119, 255, 0.5), 0 0 20px rgba(0, 119, 255, 0.7);
-}
-
-.right a.youtube:hover {
-    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5), 0 0 20px rgba(255, 0, 0, 0.7);
-}
-
-.right a.instagram:hover {
-    text-shadow: 0 -5px 10px rgba(0, 255, 0, 0.685), 0 5px 10px rgb(255, 0, 170);
-}
-
-.right a.twitter:hover {
-    text-shadow: 0 0 10px rgba(0, 0, 255, 0.5), 0 0 20px rgba(0, 0, 255, 0.7);
-}
-
-.right a::before {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border-radius: 5px;
-    z-index: -1;
-    opacity: 0;
-}
-
 @media screen and (max-width: 768px) {
+    .footerContainer {
+        font-size: 1.2rem;
+        margin-bottom: 0px;
+        overflow: hidden;
+    }
     .footer {
         display: flex;
-        flex-direction: column;
         align-items: left;
         text-align: left;
         font-size: 1.2rem;
-    }
-    .right {
-        display: flex;
-        flex-direction: row;
-        gap: 10px;
-        margin-left: 25px;
+        margin-bottom: 0px;
+        overflow: hidden;
     }
 }

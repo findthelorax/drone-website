@@ -17,10 +17,9 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    /* border: 10px solid white;
-    border-radius: 25px; */
     transform: translate(-50%, -50%);
     transition: width 0.3s ease, height 0.3s ease, transform 0.3s ease;
+    clip-path: url('../styles/navClip.svg#svgClipPath');
 }
 
 @media (max-width: 1515px) {

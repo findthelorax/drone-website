@@ -6,7 +6,7 @@
 
 .drone {
     position: absolute;
-    top: -35%;
+    top: 0%;
     left: 35%;
     width: 400px;
     height: auto;
@@ -14,4 +14,10 @@
     transition: transform 0.1s ease-out;
     z-index: 99;
     background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .drone {
+        top: -20%;
+    }    
 }
