@@ -16,4 +16,6 @@ const FooterContainer = forwardRef<HTMLDivElement, FooterContainerProps>(({ chil
     );
 });
 
+FooterContainer.displayName = "FooterContainer";
+
 export default FooterContainer;

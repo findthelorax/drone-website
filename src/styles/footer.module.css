@@ -13,7 +13,7 @@
     z-index: 0;
     bottom: 0;
     box-sizing: border-box;
-    height: 100vh;
+    height: 50vh;
     transition: transform 0.3s ease-in-out;
 }
 

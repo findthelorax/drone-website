@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, useCallback } from "react";
 import { gsap } from "gsap";
 import dynamic from "next/dynamic";
 import { videos } from "@/data/videos";
@@ -23,37 +23,16 @@ const VideoSlider = () => {
         }
     }, [isClient, sliderRef]);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            handleClick();
-        }, 10000);
-
-        return () => clearInterval(interval);
-    }, [iAnimating]);
-
-    const initializeCards = () => {
-        if (!sliderRef.current) return;
-        const cards = Array.from(sliderRef.current.querySelectorAll(`.${styles.videoSliderCard}`));
-        gsap.to(cards, {
-            y: (i) => 0 + 10 * i + "%",
-            z: (i) => 15 + i,
-            scale: (i) => 1 + 0.1 * i,
-            duration: 1,
-            ease: "power3.out",
-            stagger: -0.1,
-        });
-    }
-
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         if (iAnimating) return;
         setIAnimating(true);
 
-        if (!sliderRef.current) return; // Add null check
+        if (!sliderRef.current) return;
         const slider = sliderRef.current;
         const cards = Array.from(slider.querySelectorAll(`.${styles.videoSliderCard}`));
         const lastCard = cards.pop();
 
-        if (!lastCard) return; // Add null check
+        if (!lastCard) return;
         gsap.to(lastCard, {
             y: "+=100%",
             duration: 0.75,
@@ -67,6 +46,27 @@ const VideoSlider = () => {
                     }, 1000);
                 }, 300);
             },
+        });
+    }, [iAnimating]);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            handleClick();
+        }, 10000);
+
+        return () => clearInterval(interval);
+    }, [handleClick]);
+
+    const initializeCards = () => {
+        if (!sliderRef.current) return;
+        const cards = Array.from(sliderRef.current.querySelectorAll(`.${styles.videoSliderCard}`));
+        gsap.to(cards, {
+            y: (i) => 0 + 10 * i + "%",
+            z: (i) => 15 + i,
+            scale: (i) => 1 + 0.1 * i,
+            duration: 1,
+            ease: "power3.out",
+            stagger: -0.1,
         });
     };
 

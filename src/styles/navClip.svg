@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
     <defs>
         <clipPath id="svgClipPath" clipPathUnits="objectBoundingBox" transform="scale(0.0004 0.001)">
-            <path d="M 0 0 150 0H250h60q40 0 40 40V60q0 40 40 40H2100q40 0 40-40V40q0-40 40-40 H 2500 V 2500 H 0 Z" />
+            <path d="M 0 0 150 0H250h60q40 0 40 40V30q0 40 40 40H2110q40 0 40-40V40q0-40 40-40 H 2500 V 2500 H 0 Z" />
         </clipPath>
     </defs>
 </svg>
