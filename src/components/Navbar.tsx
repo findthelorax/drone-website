@@ -1,9 +1,12 @@
 "use client";
 
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "../styles/navbar.module.css";
 
 const Navbar = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     const handleContactClick = (
         e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
     ) => {
@@ -12,6 +15,10 @@ const Navbar = () => {
             top: document.body.scrollHeight,
             behavior: "smooth",
         });
+    };
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
     };
 
     return (
@@ -30,19 +37,20 @@ const Navbar = () => {
                         <span>e</span>
                     </div>
                 </Link>
-                <ul className={styles.navLinks}>
+                <button className={styles.hamburger} onClick={toggleMenu}>
+                    &#9776;
+                </button>
+                <ul className={`${styles.navLinks} ${isMenuOpen ? styles.showMenu : ''}`}>
                     <li>
                         <Link href="/services">SERVICES</Link>
                     </li>
                     <li>
                         <Link href="/about">
-                            {/* <div className={styles.aboutText}> */}
-                                <span>A</span>
-                                <span>B</span>
-                                <span>O</span>
-                                <span>U</span>
-                                <span>T</span>
-                            {/* </div> */}
+                            <span>A</span>
+                            <span>B</span>
+                            <span>O</span>
+                            <span>U</span>
+                            <span>T</span>
                         </Link>
                     </li>
                     <li>

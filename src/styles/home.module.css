@@ -195,3 +195,31 @@
         right: 5%;
     }
 }
+
+@media (max-width: 480px) {
+    .section3, .section4 {
+        height: auto;
+        padding: 20px;
+    }
+    .homeCard {
+        font-size: 1rem;
+        padding: 10px;
+        max-width: 90%;
+        max-height: 40%;
+        bottom: 2%;
+        right: 2%;
+        left: 5%;
+    }
+    .homeSlogan {
+        top: 10%;
+        left: 10%;
+        white-space: wrap;
+        font-size: 1.2rem;
+    }
+    .homeButton {
+        font-size: 0.8rem;
+        padding: 10px;
+        bottom: 20%;
+        right: 10%;
+    }
+}
