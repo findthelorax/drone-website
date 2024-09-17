@@ -36,6 +36,7 @@
     scroll-snap-align: start;
     background-color: rgb(255, 255, 255);
     height: 100vh;
+    align-content: center;
 }
 
 .section4 {

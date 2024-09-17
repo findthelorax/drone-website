@@ -33,8 +33,8 @@ export default function Home() {
                     <VideoSlider />
                 </section>
                 <section id="section3" className={`${homeStyles.section3}`}>
-                    {/* <ServicesCard /> */}
-                    <ServicesCards />
+                    <ServicesCard />
+                    {/* <ServicesCards /> */}
                 </section>
                 <section id="section4" className={`${homeStyles.section4}`}>
                     <FAQ />

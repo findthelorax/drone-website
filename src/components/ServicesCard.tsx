@@ -2,25 +2,40 @@ import React from 'react';
 import Image from 'next/image';
 import styles from '../styles/services2.module.css';
 import { services } from '../data/servicesData';
+import classNames from 'classnames';
 
 const ServicesCard: React.FC = () => {
     return (
-        <section id="services" className={styles.servicesSection}>
-            <div className={styles.servicesContainer}>
-                {services.map(service => (
+        <div className={styles.servicesContainer}>
+            {services.map(service => {
+                const imageWrapperClass = classNames(styles.imageWrapper, {
+                    [styles.realEstateImage]: service.image.includes('Real-Estate'),
+                    [styles.weddingsImage]: service.image.includes('Weddings'),
+                    [styles.inspectionsImage]: service.image.includes('inspections'),
+                    [styles.waterStorageImage]: service.image.includes('water-storage'),
+                    [styles.droneImage]: service.image.includes('drone'),
+                });
+
+                const serviceTextClass = classNames(styles.serviceText, {
+                    [styles.serviceTextTop]: service.title.includes('Weddings') || service.title.includes('Inspections') || service.title.includes('Orthomosaic Mapping'),
+                    [styles.serviceTextBottom]: service.title.includes('Real Estate') || service.title.includes('3D Modeling') || service.title.includes('Custom Requests'),
+                    [styles.serviceTextWhite]: service.title.includes('3D Modeling') || service.title.includes('Custom Requests'),
+                });
+
+                return (
                     <div key={service.id} className={styles.serviceCard}>
                         <div className={styles.serviceCardInner}>
                             <div className={styles.serviceCardFront}>
-                                <div className={styles.imageWrapper}>
+                                <div className={imageWrapperClass}>
                                     <Image 
                                         src={service.image} 
                                         alt={service.title}
-                                        layout="fill"
-                                        objectFit="cover"
+                                        width={2500}
+                                        height={2500}
                                         className={styles.serviceImage} 
                                     />
                                 </div>
-                                <div className={styles.serviceText}>
+                                <div className={serviceTextClass}>
                                     <h2>{service.title.toUpperCase()}</h2>
                                 </div>
                             </div>
@@ -30,9 +45,9 @@ const ServicesCard: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                ))}
-            </div>
-        </section>
+                );
+            })}
+        </div>
     );
 };
 

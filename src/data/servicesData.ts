@@ -9,7 +9,7 @@ export const services: Service[] = [
     {
         id: 1,
         title: "Real Estate Photography",
-        image: "/assets/Real-Estate-removebg-preview.png",
+        image: "/assets/Real-Estate.jpeg",
         description: "Aerial shots of a property are no longer reserved for super high-end properties. Drones have dramatically reduced the price of these unique perspectives, so take advantage of the opportunity to provide your potential buyer with a bird’s-eye view of their future home."
     },
     {
@@ -21,7 +21,7 @@ export const services: Service[] = [
     {
         id: 3,
         title: "Inspections",
-        image: "/assets/inspections-removebg.png",
+        image: "/assets/Inspections.jpeg",
         description: "By using a drone to evaluate the condition of an asset, you avoid having to place yourself in a dangerous situation. Instead of climbing several stories in the air on a tower to take a close look at a guy-wire, or scaling scaffolding to view construction progress, why not send a drone instead?"
     },
     {
@@ -33,13 +33,13 @@ export const services: Service[] = [
     {
         id: 5,
         title: "Orthomosaic Mapping",
-        image: "/assets/Orthomosaic-Mapping.jpeg",
-        description: "Description of Service 3"
+        image: "/assets/ortho.jpg",
+        description: "Orthomosaic mapping is a technique that stitches together hundreds of aerial images to create a detailed, high-resolution map of a large area. This is a great tool for construction, agriculture, and land development."
     },
     {
         id: 6,
         title: "Custom Requests",
         image: "/assets/drone-removebg.png",
-        description: "Description of Service 3"
+        description: "We are always up for a challenge and love to think outside the box. Contact us to discuss your project and we will work with you to create a custom solution for your unique needs.  "
     },
 ];
