@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import styles from '../styles/services2.module.css';
+import styles from '../styles/services.module.css';
 import { services } from '../data/servicesData';
 import classNames from 'classnames';
 

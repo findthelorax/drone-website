@@ -6,7 +6,6 @@ import HomeCard from "@/components/HomeCard";
 import HomeSlogan from "@/components/HomeSlogan";
 import HomeButton from "@/components/HomeButton";
 import ServicesCard from "@/components/ServicesCard";
-import ServicesCards from "@/components/ServicesCards";
 import ContactSection from "@/components/ContactSection";
 import VideoBackground from "@/components/VideoBackground";
 import FooterContainer from "@/components/FooterContainer";
@@ -34,7 +33,6 @@ export default function Home() {
                 </section>
                 <section id="section3" className={`${homeStyles.section3}`}>
                     <ServicesCard />
-                    {/* <ServicesCards /> */}
                 </section>
                 <section id="section4" className={`${homeStyles.section4}`}>
                     <FAQ />
