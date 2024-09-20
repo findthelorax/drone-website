@@ -12,12 +12,30 @@
     height: auto;
     transform-origin: center;
     transition: transform 0.1s ease-out;
-    z-index: 99;
+    z-index: 3;
     background-color: transparent;
+}
+
+
+
+@media screen and (max-width: 2200px) {
+    .drone {
+        left: 80%;
+    }    
 }
 
 @media screen and (max-width: 768px) {
     .drone {
-        top: -20%;
+        top: -27%;
+        left: 50%;
+        z-index: 3;
+    }    
+}
+
+@media screen and (max-width: 480px) {
+    .drone {
+        top: -30%;
+        left: 20%;
+        z-index: 3;
     }    
 }

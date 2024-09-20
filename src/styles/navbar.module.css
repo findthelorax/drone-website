@@ -6,7 +6,7 @@
     width: 70%;
     left: 0;
     right: 0;
-    top: 2%;
+    top: 0%;
     margin-left: auto;
     margin-right: auto;
     border-radius: 15px;
@@ -149,9 +149,10 @@
 
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 1150px) {
     .navbar {
-        width: 90%;
+        width: 70%;
+        top: 1%;
     }
 
     .logo {
@@ -164,12 +165,13 @@
     }
 }
 
-@media (max-width: 550px) {
+
+
+@media (max-width: 800px) {
     .navbar {
-        width: 100%;
-        top: 0%;
+        width: 65%;
+        top: 1%;
         margin: auto;
-        padding: 5px;
     }
 
     .navLinks {
@@ -187,10 +189,6 @@
         font-weight: 1000;
     }
 
-    .logo {
-        font-size: 1.5rem;
-    }
-
     .navLinks a {
         font-size: 1rem;
     }
@@ -202,20 +200,6 @@
     .hamburger {
         display: block;
         color: black;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar {
-        width: 65%;
-    }
-
-    .logo {
-        font-size: 1.2rem;
-    }
-
-    .navLinks a {
-        font-size: .8rem;
     }
 }
 

@@ -13,14 +13,16 @@
     z-index: 0;
     bottom: 0;
     box-sizing: border-box;
-    height: 50vh;
+    min-height: 50vh;
     transition: transform 0.3s ease-in-out;
+    overflow: hidden;
 }
 
 .footer {
     display: flex;
     width: 90%;
     margin-bottom: 10px;
+    overflow: hidden;
 }
 
 @media screen and (max-width: 768px) {

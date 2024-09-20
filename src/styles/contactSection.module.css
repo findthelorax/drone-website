@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding-top: 20px;
     width: 100%;
     margin-top: auto;
     font-size: 1.5rem;
@@ -81,6 +81,10 @@
     align-items: center;
 }
 
+@media screen and (max-width: 1750px) {
+    
+}
+
 @media screen and (max-width: 768px) {
     .contactSection {
         flex-direction: column;
@@ -94,19 +98,22 @@
     .contactSectionRow {
         flex-direction: column;
         width: 100%;
-        background: rgb(0, 0, 0); /* Card-like background */
-        border: 1px solid rgb(255, 255, 255); /* Card-like border */
+        background: rgb(0, 0, 0);
+        border: 1px solid rgb(255, 255, 255);
         border-radius: 25px;
-        padding: 20px; /* Padding for the card */
-        margin-bottom: 20px; /* Space between the card and the footer */
-        z-index: 2; /* Ensure it's above the footer */
-        position: relative; /* Required for z-index to work */
+        padding: 20px;
+        margin-bottom: 20px;
+        z-index: 2;
+        position: relative;
     }
 
     .contactInfoContainer {
         flex-direction: row;
         justify-content: center;
         gap: 25px;
+    }
+    .contactTitle {
+        z-index: 4;
     }
 }
 
