@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import styles from "@/styles/services.module.css";
 import Navbar from "@/components/Navbar";
-import { services } from "@/data/servicesData.ts";
+import { services } from "@/data/servicesData";
 
 export default function ServicesPage() {
     const [openId, setOpenId] = useState<number | null>(null);
