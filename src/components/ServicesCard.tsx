@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/services.module.css';
 import { services } from '../data/servicesData';
 import classNames from 'classnames';
 
 const ServicesCard: React.FC = () => {
+    const [flippedId, setFlippedId] = useState<number | null>(null);
+
+    const handleCardClick = (id: number) => {
+        setFlippedId(prev => (prev === id ? null : id));
+    };
+
     return (
         <div className={styles.servicesContainer}>
             {services.map(service => {
@@ -22,9 +28,19 @@ const ServicesCard: React.FC = () => {
                     [styles.serviceTextWhite]: service.title.includes('3D Modeling') || service.title.includes('Custom Requests'),
                 });
 
+                const cardInnerClass = classNames(styles.serviceCardInner, {
+                    [styles.rotated]: flippedId === service.id,
+                });
+
                 return (
-                    <div key={service.id} className={styles.serviceCard}>
-                        <div className={styles.serviceCardInner}>
+                    <div
+                        key={service.id}
+                        className={styles.serviceCard}
+                        onClick={() => handleCardClick(service.id)}
+                        tabIndex={0}
+                        style={{ cursor: "pointer" }}
+                    >
+                        <div className={cardInnerClass}>
                             <div className={styles.serviceCardFront}>
                                 <div className={imageWrapperClass}>
                                     <Image 

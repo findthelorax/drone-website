@@ -4,16 +4,38 @@ import { getRandomDinosaurFact } from '../data/dinosaurFacts';
 
 const ContactCard: React.FC = () => {
     const [randomFact, setRandomFact] = useState('');
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+    const [error, setError] = useState('');
 
     useEffect(() => {
         setRandomFact(getRandomDinosaurFact());
     }, []);
 
+    const validateEmail = (email: string) => {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    };
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!name || !email || !message) {
+            setError('All fields are required.');
+            return;
+        }
+        if (!validateEmail(email)) {
+            setError('Please enter a valid email address.');
+            return;
+        }
+        setError('');
+        // Submit logic here (e.g., API call)
+        alert('Message sent!');
+    };
+
     return (
         <section id="contact">
             <div className={styles.contactCardContainer}>
-                <div className={styles.contactCard}>
-                    {/* <h2>Have a question? Please reach out.</h2> */}
+                <form className={styles.contactCard} onSubmit={handleSubmit} noValidate>
                     <div>
                         <label className="sr-only" htmlFor="name">
                             Name
@@ -23,6 +45,9 @@ const ContactCard: React.FC = () => {
                             id="name"
                             type="text"
                             placeholder="NAME"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                            required
                         />
                     </div>
                     <div>
@@ -34,6 +59,9 @@ const ContactCard: React.FC = () => {
                             id="email"
                             type="email"
                             placeholder="EMAIL"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                            required
                         />
                     </div>
                     <div>
@@ -45,10 +73,18 @@ const ContactCard: React.FC = () => {
                             id="message"
                             placeholder={randomFact.toUpperCase()}
                             rows={4}
+                            value={message}
+                            onChange={e => setMessage(e.target.value)}
+                            required
                         ></textarea>
                     </div>
+                    {error && (
+                        <div style={{ color: 'red', marginBottom: '10px' }}>
+                            {error}
+                        </div>
+                    )}
                     <div className="flex items-center justify-center">
-                        <button className={styles.contactButton}>
+                        <button className={styles.contactButton} type="submit">
                             SEND MESSAGE
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +103,7 @@ const ContactCard: React.FC = () => {
                             </svg>
                         </button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
     );

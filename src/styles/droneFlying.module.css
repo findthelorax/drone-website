@@ -6,17 +6,34 @@
 
 .drone {
     position: absolute;
-    top: -35%;
+    top: -25%;
     left: 35%;
     width: 400px;
     height: auto;
     transform-origin: center;
     transition: transform 0.1s ease-out;
-    z-index: 3;
-    background-color: transparent;
+    z-index: 2;
+    pointer-events: none;
+    /* animation: droneFlying 10s linear infinite; */
 }
 
-
+/* @keyframes droneFlying {
+    0% {
+        transform: translateX(0) rotate(0deg);
+    }
+    25% {
+        transform: translateX(100px) rotate(10deg);
+    }
+    50% {
+        transform: translateX(200px) rotate(-10deg);
+    }
+    75% {
+        transform: translateX(100px) rotate(10deg);
+    }
+    100% {
+        transform: translateX(0) rotate(0deg);
+    }
+} */
 
 @media screen and (max-width: 2200px) {
     .drone {
@@ -24,18 +41,26 @@
     }    
 }
 
+@media screen and (max-width: 1600px) {
+    .drone {
+        top: -20%;
+        left: 50%;
+        z-index: 1;
+    }    
+}
+
 @media screen and (max-width: 768px) {
     .drone {
-        top: -27%;
+        top: -20%;
         left: 50%;
-        z-index: 3;
+        z-index: 1;
     }    
 }
 
 @media screen and (max-width: 480px) {
     .drone {
-        top: -30%;
+        top: -20%;
         left: 20%;
-        z-index: 3;
+        z-index: 1;
     }    
 }

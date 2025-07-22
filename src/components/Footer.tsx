@@ -6,8 +6,11 @@ const Footer: React.FC = () => {
 
     return (
         <footer className={styles.footer}>
-            <div className={styles.left}>
-                <p>© &nbsp;{year}&nbsp; DKS Drone</p>
+            <div className={styles.footerContent}>
+                <span>© {year} DKS Drone</span>
+                <span className={styles.madeBy}>
+                    Made by <strong>Brett Ferrante</strong>
+                </span>
             </div>
         </footer>
     );

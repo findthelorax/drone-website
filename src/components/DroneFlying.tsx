@@ -23,8 +23,6 @@ const DroneFlying: React.FC = () => {
                 // Clamp the angle between -20 and 20 degrees
                 const clampedAngle = Math.max(-20, Math.min(20, invertedAngle));
 
-                console.log(`MouseX: ${mouseX}, DroneX: ${droneX}, DeltaX: ${deltaX}, Angle: ${angle}, ClampedAngle: ${clampedAngle}`);
-
                 setRotation(clampedAngle);
             }
         };
