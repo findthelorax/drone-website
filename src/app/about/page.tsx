@@ -27,8 +27,8 @@ export default function About() {
 					style={{ borderRadius: '50%', margin: '2rem auto' }}
 				/>
 				<p style={{ fontSize: '1.5rem', maxWidth: '600px', margin: '2rem auto', color: '#333' }}>
-					Hi! I'm Declan, a drone pilot and lover of all things fun and quirky. I fly drones over Vermont and
-					hunt for dinosaur tracks. Let's make something awesome together!
+					Hi! I&apos;m Declan, a drone pilot and lover of all things fun and quirky. I fly drones over Vermont and
+					hunt for dinosaur tracks. Let&apos;s make something awesome together!
 				</p>
 				<div style={{ display: 'flex', justifyContent: 'center', gap: '2rem', marginTop: '2rem' }}>
 					{funFacts.map((fact, idx) => (
